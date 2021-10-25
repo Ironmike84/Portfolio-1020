@@ -1,0 +1,18 @@
+Linters Installed and Used for Portfolio Page v1.9
+
+
+LENY
+
+W3C Validation 		v0.4.0
+
+
+Atom Linter
+
+- linter StyleLint	v4.5.1
+
+- linter-htmlhint	v1.6.3
+
+- linter-csslint	v2.0.6
+
+- linter-sass-lint 	v1.9.0
+

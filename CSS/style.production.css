@@ -7,6 +7,18 @@
 
 
   
+:root {
+  --First-Color: silver;
+  --Second-Color: Red;
+  --Third-Color: grey;
+  --Fourth-Color: chartreuse;
+  --Fourth-Color-Lighter:(rgb(171, 252, 89));
+  --Fifth-Color: white;
+  --Sixth-Color: rgb(66, 66, 66);
+  --Seventh-Color: #e0b354;
+  --primary-font: 'Titillium Web', sans-serif;
+}
+
 *{
     font-family: 'Titillium Web', sans-serif;
     margin: 0px;
@@ -16,9 +28,9 @@
 
 
 body{
-    font-family: 'Titillium Web', sans-serif;
-    color: silver;
-    background-color: grey;
+    font-family: var(--primary-font);
+    color: var(--First-Color);
+    background-color: var(--Third-Color);
     background-size: cover;
     letter-spacing: 1.8;
     line-height: 1.6;
@@ -28,9 +40,9 @@ body{
 }
 
 nav{
-    font-family:'Titillium Web', sans-serif;
+    font-family:var(--primary-font);
     cursor: pointer;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--Sixth-Color);
     position: relative;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -112,7 +124,7 @@ nav{
 
 .ul-links{
     position: relative;
-    color: grey;
+    color: var(--Third-Color);
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -126,25 +138,25 @@ nav{
     width: fit-content;
 }
 a {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--primary-font);
     text-decoration: none;
-    color:chartreuse;
+    color:var(--Fourth-Color);
   }
 a:visited {
-    color:  chartreuse;
+    color:  var(--Fourth-Color);
 }
 a:hover {
-    color:chartreuse;
+    color:var(--Fourth-Color);
     text-decoration: none;
 }
 a:active {
     /* selected link */
-    color:(rgb(171, 252, 89));
+    color:var(--Fourth-Color-Lighter);
 }
 
 .container{
     position: absolute;
-    background-color: rgb(66, 66, 66);
+    background-color: var(--Sixth-Color);
     background-size: cover;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
     position: absolute;
@@ -215,7 +227,7 @@ a:active {
 
 
 .profile-desc{
-    font-family:'Titillium Web', sans-serif;
+    font-family:var(--primary-font);
     margin-left: 5px;
     margin-bottom: 0px;
     padding: 15px;
@@ -233,7 +245,7 @@ a:active {
     
 }
 .contact-form{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--primary-font);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -248,8 +260,8 @@ a:active {
     
 }
 input{
-    font-family: 'Titillium Web', sans-serif;
-    color:chartreuse;   
+    font-family: var(--primary-font);
+    color:var(--Fourth-Color);   
     margin: 7px;
     padding-left: 5px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -259,8 +271,8 @@ input{
 }
 
 textarea{
-    font-family: 'Titillium Web', sans-serif;
-    color: chartreuse;   
+    font-family: var(--primary-font);
+    color: var(--Fourth-Color);   
     padding: 10px;
     margin-left: 15px;
     margin-top: 10px;
@@ -320,7 +332,7 @@ li{
 
 li:hover{
     border-radius: 7px;
-    border: 1px outset  chartreuse;
+    border: 1px outset  var(--Fourth-Color);
 -webkit-box-shadow: 1px 1px 2px rgba(10, 10, 10, 0.8),
 2px 2px 3px rgba(0, 0, 0, 0.8),
 3px 3px 6px rgba(0, 0, 0, 0.8);
@@ -351,15 +363,15 @@ td{
 }
 
 button{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--primary-font);
     font-size: 16px;
     border-radius: 20px;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid var(--First-Color);
     cursor: pointer;
-    color: white;
+    color: var(--Fifth-Color);
     margin-left: 38%;
     margin-top: 10px;
     padding-top: 7px;
@@ -371,10 +383,10 @@ button{
 }
 
 button:hover{
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--primary-font);
     cursor: pointer;
     opacity: 0.8;
-    color: white;
+    color: var(--Fifth-Color);
     margin-left: 38%;
     margin-top: 10px;
     border: none;
@@ -383,23 +395,23 @@ button:hover{
     padding-left: 15px;
     padding-right: 15px;
     background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid silver;
+    border: 1px solid var(--First-Color);
     -webkit-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
     opacity: .80;
 }
 .button__secondary {
-    background-color: #e0b354;
+    background-color: var(--Seventh-Color);
     color: #000000;
    
   }
 
 button:focus{
-    border: 1px solid Red;
+    border: 1px solid var(--Second-Color);
 }
 .button__secondary:focus{
-    border: 1px solid Red;
+    border: 1px solid var(--Second-Color);
 }
 .grid {
     display: -ms-grid;
@@ -454,6 +466,85 @@ button:focus{
     -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
             animation: 34s cloud-move-reverse infinite alternate linear;
   }
+  @media all and (min-width: 100px) and (max-width: 450px) {
+    .navigation-list{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    .container{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 175px auto;
+      text-align: center;
+      height:-webkit-fit-content;
+      height:-moz-fit-content;
+      height:fit-content;
+      margin-left: 5px;
+      margin-top: 20px;
+    }
+    .ul-links{
+      position: absolute;
+      top:60px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      width: 170px;
+     }
+     li{
+       margin: 5px;
+       padding: 8px;
+     }
+    .inner-container{
+    -webkit-filter: drop-shadow(4px 10px 4px #00000080);
+            filter: drop-shadow(4px 10px 4px #00000080);
+      position: relative;
+      margin-left: 5px;
+      margin-bottom: 45px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    .profile-desc{
+      width: 160px;
+    }
+    .name{
+      position: relative;
+      margin-left: 100px;
+      text-shadow: 1px 1px 2px rgb(0, 0, 0),
+      2px 2px 3px rgb(0, 0, 0);
+      font-size: 18pt;
+     padding-right: 5%
+    }
+    .contact-form{
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+    .myExp{
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+
+}
   
   @media all and (min-width: 500px) and (max-width: 750px) {
     .container{
